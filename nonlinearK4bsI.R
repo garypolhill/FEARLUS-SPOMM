@@ -43,7 +43,7 @@ scenario.gam.list <- function(scenario, data = NA, explanatory.var = NA, respons
   a.gam.klm <- with(subdata, gam(response ~ s(explanatory, k = 4),
                                family = poisson(link = "log")))
   a.gam.bs <- with(subdata, gam(response ~ s(explanatory, bs = "ts"),
-                                familty = poisson(link = "log")))
+                                family = poisson(link = "log")))
 
   # Shouldn't this predict over a uniform sample in the explanatory variable?
   # A: not for computing SSQ, but yes for computing model difference
